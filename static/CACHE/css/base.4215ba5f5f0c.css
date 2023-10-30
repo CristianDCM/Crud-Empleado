@@ -1,0 +1,209 @@
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu {
+  background: #30A6E6;
+  height: 50px;
+  width: 100%; }
+
+/* line 6, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu ul, .dropdownmenu li {
+  margin: 0;
+  padding: 0; }
+
+/* line 10, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu ul {
+  list-style: none;
+  width: 100%; }
+
+/* line 14, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu li {
+  float: right; }
+  /* line 16, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+  .dropdownmenu li margin:auto {
+    position: relative; }
+
+/* line 19, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu a {
+  background: #30A6E6;
+  color: #FFFFFF;
+  display: block;
+  padding: 13px 25px;
+  text-align: center;
+  text-decoration: none; }
+
+/* line 27, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/nav.sass */
+.dropdownmenu li:hover a {
+  background-color: rgba(24, 148, 250, 0.6); }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/carousel.sass */
+.carouselController {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%; }
+
+/* line 8, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/carousel.sass */
+.carousel-inner {
+  z-index: -1; }
+  /* line 11, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/carousel.sass */
+  .carousel-inner .carousel-item .carouselimg {
+    width: 100% !important;
+    height: 80% !important; }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/footer.sass */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px 0 20px; }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/CrearEmpleado.sass */
+.ContainerEmpleado {
+  display: grid;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #cdd0fc65;
+  border: 1px solid #0011fd65;
+  border-radius: 10px;
+  margin: 20px;
+  border: 1px solid #cdd0fc65;
+  padding: 5px; }
+  /* line 15, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/CrearEmpleado.sass */
+  .ContainerEmpleado .ContainerEmpleadoTitulo {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px; }
+  /* line 22, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/CrearEmpleado.sass */
+  .ContainerEmpleado .ContainerEmpleadoFormName {
+    color: #6c6c6ca4;
+    border: 1px solid #6c6c6ca4;
+    border-radius: 5px; }
+  /* line 27, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/CrearEmpleado.sass */
+  .ContainerEmpleado .ContainerEmpleadoFields {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr); }
+    /* line 34, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/CrearEmpleado.sass */
+    .ContainerEmpleado .ContainerEmpleadoFields .ContainerEmpleadoFieldsField {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #6c6c6ca4;
+      border-radius: 10px;
+      margin: 10px; }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+.ContainerListarEmpleados {
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+  /* line 6, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+  .ContainerListarEmpleados .ContainerListarEmpleadosLink {
+    text-decoration: none; }
+    /* line 9, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+    .ContainerListarEmpleados .ContainerListarEmpleadosLink .ContainerListarEmpleadosLinkImg {
+      width: 25px;
+      margin: 5px; }
+  /* line 13, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+  .ContainerListarEmpleados .ContainerListarEmpleadosTable {
+    justify-content: center;
+    align-items: center; }
+    /* line 17, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+    .ContainerListarEmpleados .ContainerListarEmpleadosTable .ContainerListarEmpleadosTableHeadList {
+      justify-content: center;
+      align-items: center; }
+      /* line 21, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+      .ContainerListarEmpleados .ContainerListarEmpleadosTable .ContainerListarEmpleadosTableHeadList .ContainerListarEmpleadosTableHeadListItem {
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        background-color: #968ffbc1; }
+
+/* line 27, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+.ContainerListarTodosLosEmpleadosBuscador {
+  display: grid;
+  grid-template-columns: 1fr 3fr; }
+  /* line 31, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+  .ContainerListarTodosLosEmpleadosBuscador .ContainerListarTodosLosEmpleadosBuscadorEspacio {
+    margin: 5px;
+    padding: 10px; }
+
+/* line 35, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+.ContainerListarTodosLosEmpleadosTitulo {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; }
+  /* line 41, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/ListarEmpleado.sass */
+  .ContainerListarTodosLosEmpleadosTitulo .ContainerListarTodosLosEmpleadosTituloTexto {
+    text-align: center; }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/VerEmpleado.sass */
+.ContainerVerEmpleado {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px; }
+  /* line 7, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/VerEmpleado.sass */
+  .ContainerVerEmpleado .ContainerVerEmpleadolmg {
+    margin: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 150px; }
+
+/* line 14, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/VerEmpleado.sass */
+.tableContainerVer {
+  display: grid;
+  justify-content: center;
+  align-items: center; }
+
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/EliminarEmpleado.sass */
+.ContainerEliminarEmpleado {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  background-color: #cdd0fc65;
+  border: 1px solid #cdd0fc65;
+  border-radius: 10px; }
+  /* line 11, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/EliminarEmpleado.sass */
+  .ContainerEliminarEmpleado .ContainerEliminarEmpleadoSpace {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px; }
+    /* line 17, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/EliminarEmpleado.sass */
+    .ContainerEliminarEmpleado .ContainerEliminarEmpleadoSpace .ContainerEliminarEmpleadoSpaceBtn {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px; }
+      /* line 24, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/empleado/EliminarEmpleado.sass */
+      .ContainerEliminarEmpleado .ContainerEliminarEmpleadoSpace .ContainerEliminarEmpleadoSpaceBtn .ContainerEliminarEmpleadoSpaceBtnLink {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%; }
+
+/* line 9, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.Container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 70px; }

@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+<!-- Extiende de base.html -->
+
+{% load static %}
+<!-- Carga Static -->
+
+{% block tittle %} Inicio {% endblock tittle %}
+<!-- Fin titulo -->
+
+{% block body %}
+
+{% include 'base/nav.html' %}
+<!-- Fin nav -->
+
+{% include 'base/carousel.html' %} 
+<!-- Fin carousel -->
+
+{% include 'base/footer.html' %}
+<!-- Fin footer -->
+
+{% endblock body %}
+<!-- Fin del body--> 

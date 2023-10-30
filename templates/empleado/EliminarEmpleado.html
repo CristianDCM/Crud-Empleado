@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %} {% load static %} {% block tittle %} Crear
+Empleados {% endblock tittle %} {% block body %} {% include 'base/nav.html' %}
+
+<div class="Container">
+  <div class="ContainerEliminarEmpleado">
+    <div class="ContainerEliminarEmpleadoSpace">
+      <h1>
+        <h1>
+          <div class="alert alert-danger" role="alert">
+            Desea eliminar a {{EliminarEmpleado.nombres}}
+            {{EliminarEmpleado.apellidos}}
+          </div>
+        </h1>
+        <div class="ContainerEliminarEmpleadoSpaceBtn">
+          <form method="POST">
+            {% csrf_token %}
+            <button
+              type="submit"
+              class="btn btn-danger ContainerEliminarEmpleadoSpaceBtnLink"
+            >
+              Confirmar
+            </button>
+          </form>
+          <a
+            href="{% url 'empleado_app:ListarTodosLosEmpleados' %}"
+            class="btn btn-primary ContainerEliminarEmpleadoSpaceBtnLink"
+            >Volver</a
+          >
+        </div>
+      </h1>
+    </div>
+  </div>
+</div>  
+{% include 'base/footer.html' %}
+{% endblock body %}

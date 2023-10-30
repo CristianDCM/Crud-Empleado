@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %} 
+{% load static %} 
+{%block tittle %} Lista de Departamentos {% endblock tittle %} 
+{% block body %}
+{% include 'base/nav.html'%}
+<div class="Container">
+  <div class="ContainerEmpleado">
+    <div class="ContainerListarTodosLosEmpleados">
+      <div class="ContainerListarTodosLosEmpleadosTitulo">
+        <h2 class="ContainerListarTodosLosEmpleadosTituloTexto">
+          Lista de Departamentos
+        </h2>
+        <form action="" method="GET">
+          <div class="ContainerListarTodosLosEmpleadosBuscador">
+            {% csrf_token %}
+            <button
+              type="submit"
+              class="btn btn-primary ContainerListarTodosLosEmpleadosBuscadorEspacio"
+            >
+              Buscar
+            </button>
+            <input
+              class="ContainerListarTodosLosEmpleadosBuscadorEspacio form-control px-3"
+              type="text"
+              placeholder="Buscar Departamento"
+              name="kword"
+              id="kword"
+            />
+          </div>
+        </form>
+        <div class="ContainerListarEmpleados">
+          <table
+            class="table table-striped table-hover ContainerListarEmpleadosTable">
+            <thead class="ContainerListarEmpleadosTableHead">
+              <tr class="ContainerListarEmpleadosTableHeadList">
+                <th class="ContainerListarEmpleadosTableHeadListItem">ID</th>
+                <th class="ContainerListarEmpleadosTableHeadListItem">
+                  Nombre
+                </th>
+                <th class="ContainerListarEmpleadosTableHeadListItem">
+                  Código
+                </th>
+                <th class="ContainerListarEmpleadosTableHeadListItem">
+                  Estado
+                </th>
+                <th class="ContainerListarEmpleadosTableHeadListItem">
+                  Acción
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for lista in departamentos %}
+              <tr>
+                <td>{{lista.id}}</td>
+
+                <td>{{lista.nombreDepartamento}}</td>
+
+                <td>{{lista.siglaDepartamento}}</td>
+
+                <td>{{lista.activoDepartamento}}</td>
+
+                <td>
+                  <a
+                  class="ContainerListarEmpleadosLink"
+                  href="{% url 'departamento_app:ActualizarDepartamento' lista.id %}"
+                >
+                  <img
+                    class="ContainerListarEmpleadosLinkImg"
+                    src="{% static 'img/editar.svg' %}"
+                    alt=""
+                /></a>
+                  <a
+                    class="ContainerListarEmpleadosLink"
+                    href="{% url 'departamento_app:EliminarDepartamento' lista.id %}"
+                  >
+                    <img
+                      class="ContainerListarEmpleadosLinkImg"
+                      src="{% static 'img/eliminar.svg' %}"
+                      alt=""
+                  /></a>
+                  
+                
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <a
+            class="btn btn-primary ContainerListarEmpleadosLink mb-1"
+            href="{% url 'departamento_app:NuevoDepartamento' %}"
+            >Crear Departamento</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'base/footer.html' %} 
+{% endblock body %}

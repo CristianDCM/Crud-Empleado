@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %} {% load static %} {% block tittle %} Crear
+Empleado {% endblock tittle %} {% block body %} {% include 'base/nav.html' %}
+<div class="Container">
+  <div class="ContainerEmpleado">
+    <h2 class="ContainerEmpleadoTitulo">Crear Empleado</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="ContainerEmpleadoFields">
+        <div class="ContainerEmpleadoFieldsField">
+          Nombres: {{ form.nombres }}
+        </div>
+        <div class="ContainerEmpleadoFieldsField">
+          Apellidos: {{ form.apellidos }}
+        </div>
+        <div class="ContainerEmpleadoFieldsField">
+          Trabajo: {{ form.trabajo }}
+        </div>
+        <div class="ContainerEmpleadoFieldsField">
+          Departamento: {{ form.departamento }}
+        </div>
+        <div class="ContainerEmpleadoFieldsField">
+          Hoja de vida <br> {{ form.hv }}
+        </div>
+        <div>
+          <div class="ContainerEmpleadoFieldsField">
+            Avatar <br> {{form.avatar}}
+          </div>
+          <div class="ContainerEmpleadoFieldsField">
+            Habilidades: {{ form.habilidades }}
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary ContainerListarEmpleadosLink mb-1 w-100"
+          >
+            Guardar
+          </button>
+          <a
+            class="btn btn-primary ContainerListarEmpleadosLink mb-1 w-100"
+            href="{% url 'empleado_app:ListarTodosLosEmpleados' %}"
+            ><div>Volver</div></a
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% include 'base/footer.html' %} {% endblock body %}

@@ -1,0 +1,9 @@
+/* line 1, static/sass/base.sass */
+.nav {
+  position: fixed;
+  top: 0; }
+
+/* line 5, static/sass/base.sass */
+.footer {
+  position: fixed;
+  botton: 0; }

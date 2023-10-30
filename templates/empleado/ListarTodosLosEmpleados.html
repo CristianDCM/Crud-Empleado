@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %} {% load static %} {% block tittle %} Crear
+Empleados {% endblock tittle %} {% block body %} {% include 'base/nav.html' %}
+<div class="Container">
+  <div class="ContainerEmpleado">
+    <div class="ContainerListarTodosLosEmpleados">
+      <div class="ContainerListarTodosLosEmpleadosTitulo">
+        <h2 class="ContainerListarTodosLosEmpleadosTituloTexto">
+          Lista de Empleados
+        </h2>
+      </div>
+      <form action="" method="GET">
+        <div class="ContainerListarTodosLosEmpleadosBuscador">
+          {% csrf_token %}
+          <button
+            type="submit"
+            class="btn btn-primary ContainerListarTodosLosEmpleadosBuscadorEspacio"
+          >
+            Buscar
+          </button>
+          <input
+            class="ContainerListarTodosLosEmpleadosBuscadorEspacio form-control px-3"
+            type="text"
+            placeholder="Buscar Empleado"
+            name="kword"
+            id="kword"
+          />
+        </div>
+      </form>
+      <div class="ContainerListarEmpleados">
+        <table
+          class="table table-striped table-hover ContainerListarEmpleadosTable">
+          <thead class="ContainerListarEmpleadosTableHead">
+            <tr class="ContainerListarEmpleadosTableHeadList">
+              <th class="ContainerListarEmpleadosTableHeadListItem">ID</th>
+              <th class="ContainerListarEmpleadosTableHeadListItem">
+                Apellidos
+              </th>
+              <th class="ContainerListarEmpleadosTableHeadListItem">Nombres</th>
+              <th class="ContainerListarEmpleadosTableHeadListItem">
+                Departamento
+              </th>
+              <th class="ContainerListarEmpleadosTableHeadListItem">Acción</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            {% for empleado in listaEmpleados %}
+            <tr class="">
+              <td class="">{{ empleado.id }}</td>
+              <td class="">{{ empleado.nombres }}</td>
+              <td class="">{{ empleado.apellidos }}</td>
+              <td class="">{{ empleado.departamento }}</td>
+              <td class="">
+                <a
+                  class="ContainerListarEmpleadosLink"
+                  href="{% url 'empleado_app:ActualizarEmpleado' empleado.id %}"
+                >
+                  <img
+                    class="ContainerListarEmpleadosLinkImg"
+                    src="{% static 'img/editar.svg' %}"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="ContainerListarEmpleadosLink"
+                  href="{% url 'empleado_app:VerEmpleado' empleado.id %}"
+                >
+                  <img
+                    class="ContainerListarEmpleadosLinkImg"
+                    src="{% static 'img/ver.svg' %}"
+                    alt=""
+                  />
+                </a>
+                <a
+                  class="ContainerListarEmpleadosLink"
+                  href="{% url 'empleado_app:EliminarEmpleado' empleado.id %}"
+                >
+                  <img
+                    class="ContainerListarEmpleadosLinkImg"
+                    src="{% static 'img/eliminar.svg' %}"
+                    alt=""
+                  />
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>  
+          <a
+          class="btn btn-primary ContainerListarEmpleadosLink mb-1"
+          href="{% url 'empleado_app:CrearEmpleado' %}"
+          >
+          Crear Empleado
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'base/footer.html' %}
+{% endblock body %}

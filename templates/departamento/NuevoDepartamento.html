@@ -1,0 +1,35 @@
+{% extends 'base/base.html' %} {% load static %} {% block titulo %} Crear
+Empleado {% endblock titulo %} {% block body %} {% include 'base/nav.html' %}
+
+<div class="Container">
+  <div class="ContainerEmpleado">
+    <h1 class="ContainerEmpleadoTitulo m-3">Crear Departamento</h1>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <div class="ContainerEmpleadoFields">
+        <div class="ContainerEmpleadoFieldsField">
+          <!--Nombre del empleado-->
+          Nombre del Departamento: {{form.nombreDepartamento}}
+        </div>
+
+        <div class="ContainerEmpleadoFieldsField">
+          Sigla Departamento: {{form.siglaDepartamento}}
+        </div>
+
+        <div class="ContainerEmpleadoFields Field">
+          <!--Trabajo Empleado -->
+          Activo: {{form.activoDepartamento}}
+        </div>
+      </form>
+      <button type="submit" class="btn btn-primary ContainerListarEmpleadosLink mb-1">Guardar</button>
+    <a
+    class="btn btn-primary ContainerListarEmpleadosLink mb-3"
+    href="{% url 'departamento_app:ListaDepartamentos' %}"
+      ><div>Volver</div></a
+    >
+  </div>
+</div>
+{% include 'base/footer.html' %} 
+{% endblock body %}ss

@@ -1,0 +1,69 @@
+{% extends 'base/base.html' %}
+{% load static %} 
+{% block tittle %} Ver Empleado {% endblock tittle %} 
+{% block body %} 
+{% include 'base/nav.html' %}
+<div class="Container mt-4">
+  <div class="ContainerVerEmpleado">
+    <div class="card" style="width: 20rem">
+      {% if VerEmpleado.avatar %}
+      <img
+        class="ContainerVerEmpleadolmg"
+        src="{{ VerEmpleado.avatar.url }}"
+        alt="Imagen del empleado"
+      />
+      {% else %} 
+      <img
+        class="ContainerVerEmpleadolmg"
+        src="{% static 'img/person.svg' %}"
+        alt="Imagen del empleado"
+      />
+      {% endif %}
+      <div class="card-body">
+        <h5 class="card-title">
+          {{VerEmpleado.nombres }} {{ VerEmpleado.apellidos }}
+        </h5>
+        <table class="table table-striped table-hover">
+          <tr class="">
+            <td class="">Departamento</td>
+
+            <td class="">{{ VerEmpleado.departamento.nombreDepartamento }}</td>
+          </tr>
+
+          <tr class="">
+            <td class="">Habilidades</td>
+
+            <td class="">
+              {% for habilidad in VerEmpleado.habilidades.all %}
+
+              <li>{{habilidad.habilidad}}</li>
+              {% endfor %}
+            </td>
+          </tr>
+
+          <tr class="">
+            <td class="">Trabajo</td>
+
+            <td class="">
+              {{VerEmpleado.trabajo }}
+
+              {{VerEmpleado.get_trabajo_display}}
+            </td>
+          </tr>
+
+          <tr class="">
+            <td class="">Título</td>
+            <td class="">{{ titulo }}</td>
+          </tr>
+        </table>
+        <a
+        href="{% url 'empleado_app:ListarTodosLosEmpleados' %}"
+        class="btn btn-primary tableContainerVer"
+        ><div>Volver</div>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'base/footer.html' %}
+{% endblock body %}

@@ -1,0 +1,18 @@
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0px; }
+
+/* line 6, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%; }
+
+/* line 12, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid #73AD21;
+  padding: 10px; }

@@ -1,0 +1,10 @@
+{% load static %}
+<nav class="dropdownmenu">
+  <ul>
+    <!--El logo a la izquierda al fondo-->
+    <li><img src="{% static 'img/logo2.png' %}" alt="Logo" class="logo"></li>
+    <li><a href="{% url 'departamento_app:ListaDepartamentos' %}">Departamentos</a></li>
+    <li><a href="{% url 'empleado_app:ListarTodosLosEmpleados' %}">Empleados</a>
+    <li><a href="{% url 'inicio_app:InicioTemplateView' %}">Inicio</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,15 @@
+/* line 1, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+body {
+  background-color: #f5f5f5; }
+
+/* line 4, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0px; }
+
+/* line 9, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%; }

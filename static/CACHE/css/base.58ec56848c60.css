@@ -1,0 +1,21 @@
+/* line 3, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+/* line 9, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.nav {
+  width: 100%;
+  height: 50px;
+  position: fixed; }
+
+/* line 14, c:/users/cristiandc/desktop/empleadopro/empleadopro/static/sass/base.sass */
+.footer {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  text-align: center; }

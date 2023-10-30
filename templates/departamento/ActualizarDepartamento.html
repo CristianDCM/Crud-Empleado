@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %} {% load static %} {% block tittle %} Actualizar
+Departamento {% endblock tittle %} {% block body %} {% include 'base/nav.html' %}
+<div class="Container">
+  <div class="ContainerEmpleado">
+    <h2 class="ContainerEmpleadoTitulo">Actualizar Departamento</h2>
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+        <div class="ContainerEmpleadoFieldsField">
+          Nombre del Departamento: {{form.nombreDepartamento}}
+        </div>
+        <div class="ContainerEmpleadoFieldsField">
+          Sigla Departamento: {{form.siglaDepartamento}}
+        </div>
+        <div class="m-2">
+          Activo: {{form.activoDepartamento}}
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary ContainerListarEmpleadosLink mb-1 w-100"
+        >
+          Guardar
+        </button>
+    </form>
+    <a
+      class="btn btn-primary ContainerListarEmpleadosLink mb-1"
+      href="{% url 'departamento_app:ListaDepartamentos' %}"
+      ><div>Volver</div>
+    </a>
+  </div>
+</div>
+
+{% include 'base/footer.html' %} {% endblock body %}
